@@ -1,0 +1,895 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>javascript: the more you know</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="lib/css/theothercss.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ########################  -->
+<!-- INTRODUCTION  -->
+<!-- ########################  -->
+<section id="welcome" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-intro.png" data-background-opacity=".7" data-transition="fade-out">
+  <div class="ll-intro">
+    <h1>{ Javascript }</h1>
+      <ul class="speaker-card">
+        <li>s.collins@salesforce.com</li>
+        <li>@theotherstevenc</li>
+        <li>#LitmusLive</li>
+      </ul>
+  </div>
+</section>
+
+
+<!-- ########################  -->
+<!-- INTRODUCTION  -->
+<!-- ########################  -->
+<section  data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+  <section id="ecma-history" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>Javascript History</h2>
+    <p>a lot has finally changed</p>
+  </section>
+  <section id="ecma-history-1995" data-transition="fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>1995</h2>
+    <p>Javascript created and released</p>
+  </section>
+  <section id="ecma-history-1997" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>1997</h2>
+    <p>ECMAScript <strong>ES 1</strong> created and released</p>
+  </section>
+  <section id="ecma-history-1998" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>1998</h2>
+    <p>ECMAScript <strong>ES 2</strong> released</p>
+  </section>
+  <section id="ecma-history-1999" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>1999</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-2000" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2000</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-2001" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2001</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-2003" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2003</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-2005" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2005</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-2007" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2007</h2>
+    <p style="font-style:italic;">&hellip;still no update</p>
+  </section>
+  <section id="ecma-history-2008" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2008</h2>
+    <div class="ll-box">
+      <div>
+        <h3>ES 4</h3>
+        <p>Google, Adobe, Mozilla, Opera</p>
+      </div>
+      <div class="ll-vs">VS.</div>
+      <div>
+        <h3>ES 3.1</h3>
+        <p>Microsoft, Yahoo</p>
+      </div>
+    </div>
+  </section>
+  <section id="ecma-history-2009" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2009</h2>
+    <p>The <strong>3.1</strong> specificiations were released as <strong>ES 5</strong></p>
+    <p class="fragment"><strong>ES 4</strong> was completely abandoned</p>
+  </section>
+  <section id="ecma-history-the-year-2010" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2010</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-the-year-2011" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2011</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-the-year-2013" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2013</h2>
+    <p>no update</p>
+  </section>
+  <section id="ecma-history-the-year-2014" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2014</h2>
+    <p>still no update</p>
+  </section>
+  <section id="ecma-history-the-year-2015" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2015</h2>
+    <p>The <strong>ES 4</strong> specifications are finally released</p>
+    <p>
+      <strong class="fragment" data-fragment-index="1">ES Harmony</strong>
+      <strong class="fragment" data-fragment-index="2">ES 6</strong>
+      <strong class="fragment" data-fragment-index="3">ECMAScript 2015</strong>
+    </p>
+  </section>
+  <section id="ecma-history-the-year-2019" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>2019</h2>
+    <p>Current version is <strong>ECMAScript 2019</strong></p>
+  </section>
+</section>
+
+
+<!-- ########################  -->
+<!-- DOM  -->
+<!-- ########################  -->
+<section id="dom" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+
+  <section id="dom-power" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <blockquote>the true power of javascript is generating markup, whether from scratch, or from the existing
+  </blockquote>
+  </section>
+
+  <section id="document-object-model" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>Document Object Model</h2>
+    <blockquote>The DOM originated as a specification for JavaScript</blockquote>
+  </section>
+
+  <section id="document-object-model-pieces" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <ul class="ll-dom-box">
+      <li>
+        <h3>objects</h3>
+        <p>html tags</p></li>
+      <li class="fragment" data-fragment-index="2">
+        <h3>methods</h3>
+        <p>actions applied on objects and properties</p></li>
+      <li class="fragment" data-fragment-index="1">
+        <h3>properties</h3>
+        <p>content, attributes</p></li>
+      <li class="fragment" data-fragment-index="3">
+        <h3>events</h3>
+        <p>interactions with objects and properties</p></li>
+    </ul>
+  </section>
+
+  <section id="document-object-model-syntax" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2><span class="fragment highlight-current-blue">object</span>.<span class="fragment highlight-current-blue">method( )</span></h2>
+  </section>
+
+  <section id="document-object-model-getElementById" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>document.<span class="fragment highlight-current-blue">getElementById( )</span></h2>
+      <pre><code class="html" data-line-numbers="">
+<p id="bostonGetId">
+  access an element based on its ID
+</p>
+
+      </code></pre>
+      <pre><code class="js" data-line-numbers="">
+
+document.getElementById(`bostonGetId`)
+
+
+      </code></pre>
+    <p id="bostonGetId">access an element based on its ID</p>
+  </section>
+
+  <section id="document-object-model-querySelector" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>document.<span class="fragment highlight-current-blue">querySelector( )</span></h2>
+      <pre><code class="hljs html" data-line-numbers="">
+<p id="boston-query">
+  access <span>element</span> based on a selector
+</p>
+
+
+      </code></pre>
+      <pre><code class="js" data-line-numbers="">
+document.querySelector(`#boston-query span`)
+
+
+      </code></pre>
+    <p id="boston-query">access <span>element</span> based on a selector</p>
+  </section>
+
+  <section id="document-object-model-querySelectorAll" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>document.<span class="fragment highlight-current-blue">querySelectorAll( )</span></h2>
+      <pre><code class="hljs html" data-line-numbers="">
+<p class="boston-all">
+  returns a <b class="boston-all">list</b> of elements
+</p>
+
+      </code></pre>
+      <pre><code class="js" data-line-numbers="">
+console.log(document.querySelectorAll(`.boston-all`))
+
+// NodeList(2) [p.boston-all, b.boston-all]
+
+      </code></pre>
+    <p class="boston-all">returns a <b class="boston-all">list</b> of elements</p>
+  </section>
+
+  <section id="document-object-model-addEventListener" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>element.<span class="fragment highlight-current-blue">addEventListener( )</span></h2>
+      <pre><code class="hljs javascript" data-line-numbers="">
+inputElement.addEventListener(`input`, function () {
+
+  console.log(`I'm your type`)
+
+});
+
+      </code></pre>
+      <p>sets up a function to be called for a specific event</p>
+  </section>
+
+  <section id="document-object-model-innerhtml" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>element.<span class="fragment highlight-current-blue">innerHTML</span></h2>
+      <pre><code class="js" data-line-numbers="">
+
+document.querySelector('p.bostonInner').innerHTML = `New Text`
+
+
+      </code></pre>
+      <p class="bostonInner">change the HTML content</p>
+  </section>
+
+  <section id="document-object-model-console-log" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>console.<span class="fragment highlight-current-blue">log( )</span></h2>
+      <pre><code class="hljs js" data-line-numbers="">
+x = 11
+
+  console.log(x + 10)
+
+// 21
+
+
+  console.log(11 + 10)
+
+// 21
+
+      </code></pre>
+    <p>purely for learning, testing and debugging</p>
+  </section>
+
+
+</section>
+
+
+
+<!-- ########################  -->
+<!-- VARIABLES DATATYPES  -->
+<!-- ########################  -->
+<section id="the-variables-and-datatypes">
+
+  <section id="var-intro" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>{variables}</h1>
+    <blockquote>
+      &ldquo; a location in memory<br>
+      whose data can change<br>
+      from time to time &rdquo;
+    </blockquote>
+  </section>
+
+  <section id="var-data" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>{data types}</h1>
+    <blockquote>
+      defined in the ECMAScript standards<br>
+    </blockquote>
+  </section>
+
+  <section id="var-str" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2><span class="fragment highlight-current-blue">let</span> (the keyword)</h2>
+    <pre><code class="js var-snippet" data-line-numbers=""></code></pre>
+  </section>
+
+  <section id="var-str" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>string</h2>
+    <pre><code class="js var-snippet" data-line-numbers="2-3"></code></pre>
+  </section>
+
+  <section id="var-num" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>number</h2>
+    <pre><code class="js var-snippet" data-line-numbers="5-6"></code></pre>
+  </section>
+
+  <section id="var-bool" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>true/false</h2>
+    <pre><code class="js var-snippet" data-line-numbers="8-9"></code></pre>
+  </section>
+
+  <section id="var-null" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>empty</h2>
+    <pre><code class="js var-snippet" data-line-numbers="11-12"></code></pre>
+  </section>
+
+  <section id="var-undef" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>undefined</h2>
+    <pre><code class="js var-snippet" data-line-numbers="14-15"></code></pre>
+  </section>
+
+  <section id="var-undef" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>semicolons not required</h2>
+    <pre><code class="js var-snippet" data-line-numbers="2, 8, 11"></code></pre>
+  </section>
+
+  <section id="var-quotes" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>single or a double?</h2>
+    <pre><code class="js" data-line-numbers="">
+let y = "value for y"
+//double quotes
+
+let z = 'value for z'
+//single quotes
+
+let x = `value for x`
+//backtick
+
+// backticks offer extended functionality
+
+      </code></pre>
+  </section>
+
+</section>
+
+
+
+<!-- ########################  -->
+<!-- THE OTHER DATATYPES  -->
+<!-- ########################  -->
+<section id="the-other-datatypes" data-background="#494747" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+  <section id="the-other-datatypes-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the other data types</h2>
+
+      <ul>
+        <li>objects { }</li>
+        <li>arrays [ ]</li>
+        <li>functions ( )</li>
+      </ul>
+
+  </section>
+
+  <section id="js-objects-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>objects { }</h1>
+    <p>collection of data, structured like an unordered list</p>
+  </section>
+
+  <section id="js-objects-ex" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>objects { }</h1>
+    <pre><code class="js" data-line-numbers="">
+let apple = {
+
+  type:`honeycrisp`,
+  oragnic:true
+
+}
+
+console.log(apple.type)
+// honeycrisp
+
+    </code></pre>
+  </section>
+
+  <section id="js-arrays-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>arrays [ ]</h1>
+    <p>collection of data, structured like an ordered list</p>
+  </section>
+
+  <section id="js-array-ex" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>arrays [ ]</h1>
+    <pre><code class="js" data-line-numbers="">
+let apples = [
+  {
+    type:`honeycrisp`,
+    oragnic:true
+  },
+  {
+    type:`gala`,
+    oragnic:false
+  }
+]
+
+console.log(apples[1].type)
+// gala
+
+    </code></pre>
+  </section>
+
+  <section id="js-functions-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h1>functions ( )</h1>
+    <p>first-class objects</p>
+  </section>
+
+  <section id="js-functions-ex" data-transition="fade-in" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers=""></code></pre>
+  </section>
+
+  <section id="js-functions-ex-for" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers="2-11"></code></pre>
+  </section>
+
+  <section id="js-functions-ex-for" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers="13,15"></code></pre>
+  </section>
+
+  <section id="js-functions-ex-for-end" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers="2,13,15"></code></pre>
+  </section>
+
+  <section id="js-functions-ex-for-alt-endv1" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers="3-6,14,16"></code></pre>
+  </section>
+
+  <section id="js-functions-ex-for-alt-endv2" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the for&hellip;of statement</h2>
+    <pre><code class="js forofjs" data-line-numbers="7-10,14,17"></code></pre>
+  </section>
+
+</section>
+
+</section>
+
+  <section id="var-hello-world" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2 id="myTitle">Hello Boston</h2>
+    <pre><code class="html" data-line-numbers="">
+<input type="text" id="myinput" placeholder="Litmus Live Boston..">
+
+      </code></pre>
+      <pre><code class="js" data-line-numbers="">
+let inputElement = document.querySelector(`#myinput`)
+
+  inputElement.addEventListener(`input`, function () {
+
+    let userInput = inputElement.value
+    document.querySelector(`#myTitle`).innerHTML = userInput
+
+    console.log(userInput)
+
+});
+
+      </code></pre>
+
+      <input type="text" class="myinput" id="myinput" placeholder="Litmus Live Boston 2019">
+
+  </section>
+
+
+<!-- ########################  -->
+<!-- KEYWORDS  -->
+<!-- ########################  -->
+<section id="keyword-secret" data-background="#494747" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+
+  <section id="semantic-markup-idea" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>a new semantic markup</h2>
+    <p>from the developer point of view</p>
+    <blockquote>"writing markup than means something to us, and rethinking what an email template is"</blockquote>
+  </section>
+
+
+  <section id="keyword-secret-intro" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>how it works</h2>
+    <blockquote>email client targeting example</blockquote>
+  </section>
+
+  <section id="keyword-secret-ex-simple" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Gmail</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* Gmail */
+u + .body .foo {
+  display:none;
+}
+
+/* Gmail mobile apps */
+@media screen and (max-width: 480px) {
+  u + .body .foo {
+    display: block! important;
+  }
+}
+
+    </code></pre>
+    <p>using standard CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-ex-simple-key" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Gmail</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* Gmail */
+-gmail .foo {
+  display:none;
+}
+
+/* Gmail mobile apps */
+-mobilegmail {
+  -gmail .foo {
+    display: block! important;
+  }
+}
+
+    </code></pre>
+    <p>using semantic CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-ex-not-simple" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting iOS</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* iOS 13 */
+.apple-mail-implicit-dark-support .foo {
+  color:contrast;
+}
+
+/* iOS 10 */
+@supports (-webkit-overflow-scrolling:touch) and (color:#ffff) {
+  .foo {
+    display:none;
+  }
+}
+
+    </code></pre>
+    <p>using standard CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-ex-not-simple-key" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting iOS</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* iOS 13 */
+-ios13 .foo {
+  color:contrast;
+}
+
+/* iOS 10 */
+-ios10 {
+  .foo {
+    display:none;
+  }
+}
+
+    </code></pre>
+    <p>using semantic CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-ex-outlook-complex" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Outlook</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* outlook (macOS) */
+_:-webkit-full-screen,
+_::-webkit-full-page-media,
+_:future,:root .body:not(.Singleton) .foo {
+  display:none;
+}
+
+    </code></pre>
+    <p>using standard CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-ex-outlook-complex-key" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Outlook</h2>
+    <pre><code class="hljs css" data-line-numbers="" data-noescape>
+/* outlook (macOS) */
+-outlookmac .foo {
+  display:none;
+}
+
+    </code></pre>
+    <p>using semantic CSS markup</p>
+  </section>
+
+  <section id="keyword-secret-js-mso-target" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Outlook</h2>
+    <pre><code class="hljs html" data-line-numbers="">
+<div class="ghost-content-container">
+  <!--[if mso 15]>
+  <table role="presentation" width="100%;" bgcolor="green">
+    <tr>
+      <td>
+  <![endif]-->
+  <div class="ghost-content">content in ghost table</div>
+  <!--[if mso 15]>
+      </td>
+    </tr>
+  </table>
+  <![endif]-->
+</div>
+
+    </code></pre>
+    <p>using standard HTML markup</p>
+  </section>
+
+  <section id="keyword-secret-js-mso-keyword" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>targeting Outlook</h2>
+    <pre><code class="hljs html" data-line-numbers="">
+<div class="ghost-content-container">
+  <!--mso2013
+  <table role="presentation" width="100%;" bgcolor="green">
+    <tr>
+      <td>
+  mso-->
+  <div class="ghost-content">content in ghost table</div>
+  <!--mso2013
+      </td>
+    </tr>
+  </table>
+  mso-->
+</div>
+
+    </code></pre>
+    <p>using semantic HTML markup</p>
+  </section>
+
+
+<!-- THE KEYWORD INITIATIVE  -->
+  <section id="keyword-reveal" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <pre><code class="hljs js keyword-reveal" data-line-numbers=""></code></pre>
+  </section>
+
+  <section id="keyword-reveal-b" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <pre><code class="hljs js keyword-reveal" data-line-numbers="2-11"></code></pre>
+  </section>
+
+  <section id="keyword-reveal-c" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <pre><code class="hljs js keyword-reveal" data-line-numbers="13"></code></pre>
+  </section>
+
+  <section id="keyword-reveal-d" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <pre><code class="hljs js keyword-reveal" data-line-numbers="14-16"></code></pre>
+  </section>
+
+  <section id="keyword-reveal-e" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <pre><code class="hljs js keyword-reveal" data-line-numbers="17"></code></pre>
+  </section>
+
+
+<!-- THE KEYWORD SUPER LIST  -->
+  <section id="keyword-reveal-super-list" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>the super list</h2>
+    <pre><code class="hljs js super-list" data-line-numbers=""></code></pre>
+  </section>
+</section>
+
+
+<!-- ########################  -->
+<!-- CHROME EXTENSION  -->
+<!-- ########################  -->
+<section id="chrome-ext" data-background="#494747" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+
+  <section id="chrome-ext-intro" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>Chrome Extensions</h2>
+    <p>test before you test</p>
+  </section>
+
+  <section id="chrome-ext-quest" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>what will this extension do?</h2>
+      <p class="fragment" data-fragment-index="1">render the gmail styles</p>
+      <p class="fragment" data-fragment-index="2">disable animations</p>
+      <p class="fragment" data-fragment-index="3">uncheck any input</p>
+  </section>
+
+  <section id="chrome-ext-side-note" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <p><strong>side note:</strong> any css not supported in gmail<br>needs to be in a separate style block</p>
+    <pre><code class="hljs html" data-line-numbers="">
+<style advanced>
+  .styles .not .supported .in .gmail {
+    fancy: things;
+  }
+</style>
+
+    </code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <p>configuration, properties, information about the chrome extension</p>
+  </section>
+
+<!-- hello manifest walkthru -->
+  <section id="chrome-ext-manifest-ex-walkthru-a" data-transition="fade-in" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-b" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="2" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-c" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="5-12" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-d" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="7-9" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-e" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="10" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-f" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="13" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-g" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="14-18" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-h" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="15" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-manifest-ex-walkthru-i" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>manifest.json</h2>
+    <pre><code class="hljs json manifest-snippet" data-line-numbers="16" data-trim data-noescape></code></pre>
+  </section>
+<!-- goodbye manifest walkthru -->
+
+  <section id="chrome-ext-popup-title" data-transition="fade-in fade-out" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>default_popup</h2>
+    <p><strong>.html</strong> and a <strong>.js</strong> friend</p>
+  </section>
+
+  <section id="chrome-ext-popup-html-ex-a" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.html</h2>
+    <pre><code class="hljs html popup-html-ex" data-line-numbers="" data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-html-ex-b" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.html</h2>
+    <pre><code class="hljs html popup-html-ex" data-line-numbers="9" data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-html-ex-c" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.html</h2>
+    <pre><code class="hljs html popup-html-ex" data-line-numbers="12" data-noescape></code></pre>
+  </section>
+
+<!-- hello popup js -->
+  <section id="chrome-ext-popup-js-ex-a" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-js-ex-b" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="6-10" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-js-ex-c" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="9" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-js-ex-d" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="12-17" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-js-ex-e" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="15" data-trim data-noescape></code></pre>
+  </section>
+
+  <section id="chrome-ext-popup-js-ex-f" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>popup.js</h2>
+    <pre><code class="hljs javascript popupjs" data-line-numbers="9,12,15" data-trim data-noescape></code></pre>
+  </section>
+
+<!-- goodbye popup js -->
+
+  <section id="chrome-ext-content-a" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-b" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="1" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-c" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="3,29" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-d" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="5-14" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-e" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="16-19" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-f" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="21" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-f2" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="22" data-trim data-noescape>  </code></pre>
+  </section>
+
+  <section id="chrome-ext-content-g" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>content.js</h2>
+      <pre><code class="hljs javascript contentjs" data-line-numbers="24-27" data-trim data-noescape>  </code></pre>
+  </section>
+
+</section>
+
+  <section id="chrome-ext-content-gh" data-transition="none" data-background-position="top left" data-background-size="cover" data-background-image="lib/img/_sf-slide-clear.png" data-background-opacity="1">
+    <h2>Chrome Extension</h2>
+    <a style="background: black; font-size:.9em; padding: .4em;" href="https://github.com/theotherstevenc/test-before-you-test">
+      github.com/theotherstevenc/test-before-you-test
+    </a>
+    <br><br><br>
+    <h2>Markup with Meaning</h2>
+    <a style="background: black; font-size:.9em; padding: .4em;" href="https://github.com/theotherstevenc/markup-with-meaning">
+      github.com/theotherstevenc/markup-with-meaning
+    </a>
+  </section>
+
+
+<section id="thank-you" data-background-image="lib/img/_sf-slide-intro.png" data-background-opacity=".7" data-transition="fade-out">
+  <div class="ll-intro">
+    <h1>thank you()</h1>
+      <ul class="speaker-card">
+        <li>s.collins@salesforce.com</li>
+        <li>@theotherstevenc</li>
+        <li>#LitmusLive</li>
+      </ul>
+  </div>
+</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/snippets.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+      	// width: "95%",
+      	// height: "95%",
+      	// margin: 0,
+      	// minScale: 1,
+      	// maxScale: 1,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
