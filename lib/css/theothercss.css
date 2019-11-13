@@ -7,7 +7,8 @@
   font-size: .6em
 }
 .reveal blockquote {
-  padding: 2em 1em;
+  padding: 60px;
+  width:auto;
 }
 
 pre {
